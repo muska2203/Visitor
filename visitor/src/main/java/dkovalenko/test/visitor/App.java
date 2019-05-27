@@ -7,7 +7,6 @@ public class App {
 
     public static void main(String[] args) {
         Visitor visitorSiren = new VisitorSiren();
-
         List<Person> people = Arrays.asList(new JustPerson(),
                 new MainPerson("Президент"),
                 new OfficePerson(),
@@ -22,16 +21,17 @@ public class App {
     }
 
     private static class VisitorSiren implements Visitor {
-        public void visitJustPerson(JustPerson justPerson) {
-            System.out.println("Обычный человек услышал: Уииииуууииииуууиииииу.");
+
+        public void visitJustPerson(JustPerson person) {
+            System.out.println("Эй, халоп, выходи, тревога.");
         }
 
-        public void visitMiddlePerson(OfficePerson middlePerson) {
-            System.out.println("Оффисный человек услышал: Тревога, пройдите пожалуйста к выходу.");
+        public void visitMiddlePerson(OfficePerson person) {
+            System.out.println("Пройдите, пожалуйста, к выходу, тревога.");
         }
 
-        public void visitMainPerson(MainPerson mainPerson) {
-            System.out.println("Супер главнй человек услышал: Господин " + mainPerson.getName() + ", вам пора спуститься в бункер.");
+        public void visitMainPerson(MainPerson person) {
+            System.out.println("Господин " + person.getName() + ", давайте мы поможем вам эвакуироваться");
         }
     }
 
