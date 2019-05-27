@@ -15,4 +15,8 @@ public class MainPerson implements Person {
     public void accept(Visitor visitor) {
         visitor.visitMainPerson(this);
     }
+
+    public String fillName(String s) {
+        return s;
+    }
 }

@@ -2,10 +2,10 @@ package dkovalenko.test.visitor;
 
 public interface Visitor {
 
-    void visitJustPerson(JustPerson justPerson);
+    void visitJustPerson(JustPerson person);
 
-    void visitMiddlePerson(OfficePerson officePerson);
+    void visitMiddlePerson(OfficePerson person);
 
-    void visitMainPerson(MainPerson mainPerson);
+    void visitMainPerson(MainPerson person);
 
 }
